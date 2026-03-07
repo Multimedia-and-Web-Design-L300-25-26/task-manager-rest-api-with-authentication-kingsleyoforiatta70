@@ -5,6 +5,7 @@ import taskRoutes from "./routes/taskRoutes.js";
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
